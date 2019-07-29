@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Failure{% endblock title %}
+
+{% block header %}
+<h1>Normal<h1>
+<h2>Return Failure</h2>
+{% endblock header %}
+
+{% block content %}
+<dl>
+  {% for key in transaction_detail %}
+  <dt>{{key}}</dt>
+  <dd>{{transaction_detail[key]}}</dd>
+  {% endfor %}
+</dl>
+{% endblock %}

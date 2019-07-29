@@ -1,0 +1,18 @@
+{% extends 'pedidos/container.html' %}
+{% block title %}Failure{% endblock title %}
+
+{% block header %}
+<h1>Normal<h1>
+<h2>Return Failure</h2>
+{% endblock header %}
+
+{% block content %}
+<dl>
+  {% for key, value in transaction_detail.items %}
+  <dt>{{key}} {{value}}</dt>
+  <dd>{{transaction_detail.key}}</dd>
+  {% endfor %}
+</dl>
+
+<a href="{% url 'integracion_tbk:normal_index' %}" class="button is-danger"> Volver al Inicio Normal</a>
+{% endblock %}
